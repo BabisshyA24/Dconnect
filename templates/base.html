@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Dento - Dentist &amp; Medical HTML Template">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+ 
+  
+  <title>Dconnect {% block title %} {% endblock %}</title>
+
+  
+  <link rel="icon" href="{%static 'img/Capture.png'  %}">
+
+ 
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    {% block styles %} {% endblock %}
+
+</head>
+
+<body>
+   {% include 'nav.html' %}
+   <df-messenger
+   chat-icon="https:&#x2F;&#x2F;m.media-amazon.com&#x2F;images&#x2F;I&#x2F;410Rvb5mM+L.jpg"
+   intent="WELCOME"
+   chat-title="D-connect"
+   agent-id="1b70cd4c-4f99-42ca-8631-c8db40591074"
+   language-code="en"
+ ></df-messenger>
+  
+      {% block content %}
+  {% endblock  %}
+  
+  <footer class="footer-area bg-img bg-gradient-overlay">
+    <div class="container">
+      <div class="row">
+       
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="single-footer-widget">
+            <a href="./index.html" class="d-block mb-4"><img src="{% static 'img/LOGO.png' %}" alt=""></a>
+
+            
+          </div>
+        </div>
+        
+        <div class="col-12 col-sm-6 col-lg">
+          <div class="single-footer-widget">
+           
+            <p> We Believe Everyone Should Have Easy Access To Great Medical Care</p>
+            <p> Chennai</p>
+            <p> 6381443008</p>
+            <p> dconnect@gmail.com</p>
+      
+          </div>
+        </div>
+
+        
+
+       
+        <div class="col-12 col-sm-6 col-lg">
+          <div class="single-footer-widget">
+            
+            <h5 class="widget-title">Opening Hours</h5>
+
+            
+            <ul class="opening-hours">
+              <li>Mon-Wed  :  8.00 AM-10.00 PM</li>
+              <li>Thu-Fri  :  8.00 AM-10.00 PM</li>
+              <li>Sat  :  8.00 AM-10.00 PM</li>
+              <li>Sun  :  8.00 AM-10.00 PM</li>
+            </ul>
+          </div>
+        </div>
+</footer>
+        
+
+  
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+ 
+  <script src="{% static 'js/dento.bundle.js' %}"></script>
+  
+  <script src="{% static 'js/default-assets/active.js' %}"></script>
+
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+   {% block javascripts %} {% endblock %}
+</body>
+
+</html>
